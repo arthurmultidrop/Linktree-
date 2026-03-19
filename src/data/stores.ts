@@ -123,6 +123,55 @@ export const stores: Record<string, StoreConfig> = {
     },
     features: ["Wi-Fi Grátis", "Tomadas", "Pet Friendly", "Acessível"],
   },
+  "pontonet": {
+    slug: "pontonet",
+    name: "PontoNet",
+    tagline: "O seu provedor de internet 🌐",
+    description: "Há mais de 7 anos conectando Parauapebas com internet de qualidade. Fibra óptica com velocidade real, suporte humanizado e a melhor experiência de conexão da região.",
+    theme: {
+      primaryColor: "#0ea5e9",
+      secondaryColor: "#6366f1",
+      bgGradientFrom: "#020617",
+      bgGradientTo: "#0c1a3d",
+      style: "modern",
+    },
+    contact: {
+      phone: "(94) 99999-0000",
+      whatsapp: "5594999990000",
+      email: "contato@pontonetpa.com.br",
+      address: "Parauapebas - PA",
+    },
+    links: [
+      { title: "📶 Conheça Nossos Planos", url: "https://pontonetpa.com.br", type: "website", icon: "website" },
+      { title: "💬 Assine pelo WhatsApp", url: "https://wa.me/5594999990000", type: "whatsapp", icon: "whatsapp" },
+      { title: "📸 Siga no Instagram", url: "https://instagram.com/_pontonett", type: "instagram", icon: "instagram" },
+      { title: "🌐 Acesse Nosso Site", url: "https://pontonetpa.com.br", type: "website", icon: "website" },
+      { title: "📍 Nossa Localização", url: "https://maps.google.com", type: "maps", icon: "maps" },
+      { title: "📞 Central de Atendimento", url: "tel:+5594999990000", type: "phone", icon: "phone" },
+      { title: "⭐ Avalie no Google", url: "https://google.com", type: "custom", icon: "custom" },
+    ],
+    schedule: [
+      { day: "Segunda a Sexta", hours: "08:00 - 18:00" },
+      { day: "Sábado", hours: "08:00 - 12:00" },
+      { day: "Domingo", hours: "Fechado" },
+    ],
+    socialMedia: {
+      instagram: "_pontonett",
+    },
+    features: ["Fibra Óptica", "Suporte 24h", "Sem Fidelidade", "Instalação Grátis"],
+    promos: [
+      {
+        title: "Internet Fibra a partir de R$ 69,90/mês",
+        description: "Planos de 100 a 500 Mega com fibra óptica direto na sua casa. Instalação grátis!",
+        badge: "FIBRA ÓPTICA",
+      },
+      {
+        title: "Indique um Amigo",
+        description: "Indique um amigo e ganhe desconto na sua próxima mensalidade!",
+        badge: "PROMOÇÃO",
+      },
+    ],
+  },
 };
 
 export function getStore(slug: string): StoreConfig | undefined {
