@@ -6,19 +6,12 @@ export default function StoreFeatures({
   primaryColor: string;
 }) {
   return (
-    <div
-      className="w-full animate-fade-in-up opacity-0"
-      style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}
-    >
+    <div className="w-full">
       <div className="flex flex-wrap justify-center gap-2">
         {features.map((feature, index) => (
           <span
             key={index}
-            className="px-3 py-1.5 rounded-full text-xs font-medium text-white/90 border border-white/15 bg-white/5"
-            style={{
-              borderColor: `${primaryColor}40`,
-              backgroundColor: `${primaryColor}15`,
-            }}
+            className="px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-300 border border-neutral-800/60 bg-neutral-900/50"
           >
             {feature}
           </span>

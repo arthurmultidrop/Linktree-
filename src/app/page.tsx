@@ -1,121 +1,111 @@
 import Link from "next/link";
+import { CreditCard, Smartphone, Zap, ArrowRight, MessageCircle } from "lucide-react";
 import { getAllSlugs, getStore } from "@/data/stores";
 
 export default function HomePage() {
   const slugs = getAllSlugs();
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-950 via-indigo-950 to-gray-950 text-white">
-      {/* Decorative bg */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-indigo-500/10 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-purple-500/10 blur-3xl" />
-      </div>
-
-      <div className="relative z-10">
+    <main className="min-h-screen bg-neutral-950">
+      <div className="max-w-3xl mx-auto px-6">
         {/* Hero */}
-        <section className="flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center">
-          <div className="animate-fade-in-up opacity-0" style={{ animationFillMode: "forwards" }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-medium mb-8">
-              <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
-              Cartões NFC Inteligentes
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-              <span className="bg-gradient-to-r from-white via-indigo-200 to-indigo-400 bg-clip-text text-transparent">
-                NFC Card
-              </span>
-            </h1>
-
-            <p className="text-xl text-white/60 max-w-lg mx-auto mb-4">
-              Seu negócio na palma da mão do cliente.
-            </p>
-            <p className="text-sm text-white/40 max-w-md mx-auto mb-10">
-              Cartões de visita com NFC que redirecionam para uma página exclusiva
-              do seu negócio. Um toque. Todas as informações.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#demo"
-                className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-all hover:scale-105 active:scale-95 shadow-xl shadow-indigo-500/25"
-              >
-                Ver Demonstrações
-              </a>
-              <a
-                href="#como-funciona"
-                className="px-8 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-all hover:scale-105 active:scale-95"
-              >
-                Como Funciona?
-              </a>
-            </div>
+        <section className="pt-24 pb-20">
+          <p className="text-sm font-medium text-neutral-400 tracking-wide uppercase mb-4">
+            Cartões NFC Inteligentes
+          </p>
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-50 mb-4">
+            NFC Card
+          </h1>
+          <p className="text-lg text-neutral-400 max-w-md mb-3">
+            Seu negócio na palma da mão do cliente.
+          </p>
+          <p className="text-sm text-neutral-500 max-w-md mb-10">
+            Cartões de visita com NFC que redirecionam para uma página exclusiva
+            do seu negócio. Um toque. Todas as informações.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#demo"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-neutral-50 text-neutral-950 text-sm font-medium hover:bg-neutral-200 transition-colors"
+            >
+              Ver Demonstrações
+              <ArrowRight size={14} />
+            </a>
+            <a
+              href="#como-funciona"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-neutral-800 text-neutral-300 text-sm font-medium hover:bg-neutral-900 hover:border-neutral-700 transition-colors"
+            >
+              Como Funciona?
+            </a>
           </div>
         </section>
 
+        {/* Divider */}
+        <div className="border-t border-neutral-800/60" />
+
         {/* How it works */}
-        <section id="como-funciona" className="px-6 py-16 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in-up opacity-0" style={{ animationFillMode: "forwards" }}>
-            Como Funciona?
+        <section id="como-funciona" className="py-20">
+          <h2 className="text-2xl font-semibold text-neutral-50 mb-10">
+            Como Funciona
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 step: "01",
                 title: "Cartão NFC",
                 desc: "Entregamos um cartão de visita elegante com chip NFC integrado para o seu negócio.",
-                icon: "💳",
+                Icon: CreditCard,
               },
               {
                 step: "02",
                 title: "Página Exclusiva",
                 desc: "Criamos uma página personalizada com todas as informações, links e promoções do seu negócio.",
-                icon: "📱",
+                Icon: Smartphone,
               },
               {
                 step: "03",
                 title: "Um Toque",
                 desc: "Seus clientes aproximam o celular do cartão e acessam tudo sobre seu negócio instantaneamente.",
-                icon: "✨",
+                Icon: Zap,
               },
-            ].map((item, i) => (
+            ].map((item) => (
               <div
-                key={i}
-                className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 animate-fade-in-up opacity-0"
-                style={{ animationDelay: `${i * 0.15}s`, animationFillMode: "forwards" }}
+                key={item.step}
+                className="p-5 rounded-xl border border-neutral-800/60 bg-neutral-900/50"
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <div className="text-indigo-400 text-xs font-bold tracking-widest mb-2">
-                  PASSO {item.step}
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-white/50 text-sm">{item.desc}</p>
+                <item.Icon size={20} className="text-neutral-400 mb-4" />
+                <p className="text-[11px] font-medium text-neutral-500 tracking-wider uppercase mb-2">
+                  Passo {item.step}
+                </p>
+                <h3 className="text-sm font-semibold text-neutral-100 mb-2">{item.title}</h3>
+                <p className="text-sm text-neutral-500 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
+        {/* Divider */}
+        <div className="border-t border-neutral-800/60" />
+
         {/* Demo stores */}
-        <section id="demo" className="px-6 py-16 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Demonstrações</h2>
-          <p className="text-white/50 text-center mb-12">
+        <section id="demo" className="py-20">
+          <h2 className="text-2xl font-semibold text-neutral-50 mb-2">Demonstrações</h2>
+          <p className="text-sm text-neutral-500 mb-10">
             Veja como ficaria a página do seu negócio
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {slugs.map((slug, i) => {
+          <div className="grid md:grid-cols-2 gap-4">
+            {slugs.map((slug) => {
               const store = getStore(slug)!;
               return (
                 <Link
                   key={slug}
                   href={`/${slug}`}
-                  className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all hover:scale-[1.02] animate-fade-in-up opacity-0"
-                  style={{ animationDelay: `${i * 0.1}s`, animationFillMode: "forwards" }}
+                  className="group flex items-center gap-4 p-4 rounded-xl border border-neutral-800/60 hover:border-neutral-700 hover:bg-neutral-900/80 transition-colors"
                 >
                   <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold text-white mb-4 shadow-lg"
-                    style={{
-                      background: `linear-gradient(135deg, ${store.theme.primaryColor}, ${store.theme.secondaryColor})`,
-                    }}
+                    className="w-10 h-10 rounded-lg flex items-center justify-center text-xs font-semibold text-white shrink-0"
+                    style={{ backgroundColor: store.theme.primaryColor }}
                   >
                     {store.name
                       .split(" ")
@@ -125,44 +115,46 @@ export default function HomePage() {
                       .join("")
                       .toUpperCase()}
                   </div>
-                  <h3 className="font-semibold text-white group-hover:text-indigo-300 transition-colors">
-                    {store.name}
-                  </h3>
-                  <p className="text-white/40 text-sm mt-1">{store.tagline}</p>
-                  <div className="mt-4 text-indigo-400 text-xs font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Ver página →
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-sm font-medium text-neutral-100 group-hover:text-white transition-colors">
+                      {store.name}
+                    </h3>
+                    <p className="text-xs text-neutral-500 truncate">{store.tagline.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, "").trim()}</p>
                   </div>
+                  <ArrowRight size={14} className="text-neutral-600 group-hover:text-neutral-400 transition-colors shrink-0" />
                 </Link>
               );
             })}
           </div>
         </section>
 
+        {/* Divider */}
+        <div className="border-t border-neutral-800/60" />
+
         {/* CTA */}
-        <section className="px-6 py-20 text-center">
-          <div className="max-w-lg mx-auto">
-            <h2 className="text-3xl font-bold mb-4">
-              Quer um cartão para o seu negócio?
-            </h2>
-            <p className="text-white/50 mb-8">
-              Entre em contato e tenha seu cartão NFC personalizado com uma página
-              exclusiva para seus clientes.
-            </p>
-            <a
-              href="https://wa.me/5511999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-green-600 hover:bg-green-500 text-white font-medium transition-all hover:scale-105 active:scale-95 shadow-xl shadow-green-500/25"
-            >
-              💬 Fale Conosco no WhatsApp
-            </a>
-          </div>
+        <section className="py-20">
+          <h2 className="text-2xl font-semibold text-neutral-50 mb-3">
+            Quer um cartão para o seu negócio?
+          </h2>
+          <p className="text-sm text-neutral-500 mb-8 max-w-md">
+            Entre em contato e tenha seu cartão NFC personalizado com uma página
+            exclusiva para seus clientes.
+          </p>
+          <a
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-500 transition-colors"
+          >
+            <MessageCircle size={16} />
+            Fale Conosco no WhatsApp
+          </a>
         </section>
 
         {/* Footer */}
-        <footer className="px-6 py-8 text-center border-t border-white/5">
-          <p className="text-white/20 text-sm">
-            © 2026 NFC Card. Todos os direitos reservados.
+        <footer className="py-8 border-t border-neutral-800/60">
+          <p className="text-neutral-600 text-xs">
+            &copy; 2026 NFC Card. Todos os direitos reservados.
           </p>
         </footer>
       </div>

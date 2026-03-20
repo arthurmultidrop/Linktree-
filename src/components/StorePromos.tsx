@@ -1,3 +1,5 @@
+import { Tag } from "lucide-react";
+
 export default function StorePromos({
   promos,
   primaryColor,
@@ -6,32 +8,27 @@ export default function StorePromos({
   primaryColor: string;
 }) {
   return (
-    <div className="w-full space-y-3">
+    <div className="w-full space-y-2.5">
       {promos.map((promo, index) => (
         <div
           key={index}
-          className="relative rounded-2xl p-4 border border-white/10 bg-white/5 backdrop-blur-md animate-fade-in-up opacity-0 overflow-hidden"
-          style={{
-            animationDelay: `${1 + index * 0.1}s`,
-            animationFillMode: "forwards",
-          }}
+          className="rounded-xl p-4 border border-neutral-800/60 bg-neutral-900/50"
         >
-          <div
-            className="absolute top-0 left-0 w-full h-1"
-            style={{
-              background: `linear-gradient(90deg, ${primaryColor}, transparent)`,
-            }}
-          />
-          {promo.badge && (
-            <span
-              className="inline-block px-2 py-0.5 rounded text-[10px] font-bold tracking-wider text-white mb-2"
-              style={{ backgroundColor: primaryColor }}
-            >
-              {promo.badge}
-            </span>
-          )}
-          <h4 className="text-white font-semibold text-sm">{promo.title}</h4>
-          <p className="text-white/60 text-xs mt-1">{promo.description}</p>
+          <div className="flex items-start gap-3">
+            <Tag size={14} className="text-neutral-500 mt-0.5 shrink-0" />
+            <div>
+              {promo.badge && (
+                <span
+                  className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold tracking-wider text-white mb-1.5"
+                  style={{ backgroundColor: primaryColor }}
+                >
+                  {promo.badge}
+                </span>
+              )}
+              <h4 className="text-neutral-100 font-medium text-sm">{promo.title}</h4>
+              <p className="text-neutral-500 text-xs mt-1 leading-relaxed">{promo.description}</p>
+            </div>
+          </div>
         </div>
       ))}
     </div>

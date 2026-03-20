@@ -4,7 +4,7 @@ export const stores: Record<string, StoreConfig> = {
   "pizzaria-bella": {
     slug: "pizzaria-bella",
     name: "Pizzaria Bella Napoli",
-    tagline: "A verdadeira pizza napolitana em suas mãos 🍕",
+    tagline: "A verdadeira pizza napolitana em suas mãos",
     description: "Desde 2015 trazendo o melhor da culinária italiana para você. Massa artesanal, ingredientes selecionados e muito amor em cada fatia.",
     logo: "/stores/pizzaria-bella-logo.png",
     coverImage: "/stores/pizzaria-bella-cover.jpg",
@@ -22,12 +22,12 @@ export const stores: Record<string, StoreConfig> = {
       address: "Rua das Pizzas, 123 - Centro, São Paulo - SP",
     },
     links: [
-      { title: "📋 Cardápio Completo", url: "#", type: "menu", icon: "menu" },
-      { title: "🛵 Peça pelo iFood", url: "https://ifood.com.br", type: "delivery", icon: "delivery" },
-      { title: "📍 Como Chegar", url: "https://maps.google.com", type: "maps", icon: "maps" },
-      { title: "📸 Nosso Instagram", url: "https://instagram.com", type: "instagram", icon: "instagram" },
-      { title: "💬 Fale Conosco", url: "https://wa.me/5511999991234", type: "whatsapp", icon: "whatsapp" },
-      { title: "⭐ Avalie no Google", url: "https://google.com", type: "custom", icon: "custom" },
+      { title: "Cardápio Completo", url: "#", type: "menu", icon: "menu" },
+      { title: "Peça pelo iFood", url: "https://ifood.com.br", type: "delivery", icon: "delivery" },
+      { title: "Como Chegar", url: "https://maps.google.com", type: "maps", icon: "maps" },
+      { title: "Nosso Instagram", url: "https://instagram.com", type: "instagram", icon: "instagram" },
+      { title: "Fale Conosco", url: "https://wa.me/5511999991234", type: "whatsapp", icon: "whatsapp" },
+      { title: "Avalie no Google", url: "https://google.com", type: "custom", icon: "custom" },
     ],
     schedule: [
       { day: "Segunda a Quinta", hours: "18:00 - 23:00" },
@@ -50,7 +50,7 @@ export const stores: Record<string, StoreConfig> = {
   "barbearia-classic": {
     slug: "barbearia-classic",
     name: "Barbearia Classic Cut",
-    tagline: "Estilo e tradição em cada corte ✂️",
+    tagline: "Estilo e tradição em cada corte",
     description: "Barbearia premium com ambiente exclusivo. Cortes clássicos e modernos, barba, tratamentos capilares e muito mais.",
     theme: {
       primaryColor: "#d4a574",
@@ -65,11 +65,11 @@ export const stores: Record<string, StoreConfig> = {
       address: "Av. Paulista, 1000 - Sala 12, São Paulo - SP",
     },
     links: [
-      { title: "📅 Agende seu Horário", url: "#", type: "website", icon: "website" },
-      { title: "💈 Nossos Serviços", url: "#", type: "menu", icon: "menu" },
-      { title: "📸 Instagram", url: "https://instagram.com", type: "instagram", icon: "instagram" },
-      { title: "📍 Localização", url: "https://maps.google.com", type: "maps", icon: "maps" },
-      { title: "💬 WhatsApp", url: "https://wa.me/5511988885678", type: "whatsapp", icon: "whatsapp" },
+      { title: "Agende seu Horário", url: "#", type: "website", icon: "website" },
+      { title: "Nossos Serviços", url: "#", type: "menu", icon: "menu" },
+      { title: "Instagram", url: "https://instagram.com", type: "instagram", icon: "instagram" },
+      { title: "Localização", url: "https://maps.google.com", type: "maps", icon: "maps" },
+      { title: "WhatsApp", url: "https://wa.me/5511988885678", type: "whatsapp", icon: "whatsapp" },
     ],
     schedule: [
       { day: "Segunda a Sexta", hours: "09:00 - 20:00" },
@@ -91,7 +91,7 @@ export const stores: Record<string, StoreConfig> = {
   "cafe-aroma": {
     slug: "cafe-aroma",
     name: "Café Aroma & Arte",
-    tagline: "Onde cada xícara conta uma história ☕",
+    tagline: "Onde cada xícara conta uma história",
     description: "Cafeteria artesanal com grãos selecionados, ambiente acolhedor e opções deliciosas de brunch.",
     theme: {
       primaryColor: "#92400e",
@@ -107,11 +107,11 @@ export const stores: Record<string, StoreConfig> = {
       address: "Rua Augusta, 500 - Consolação, São Paulo - SP",
     },
     links: [
-      { title: "☕ Nosso Menu", url: "#", type: "menu", icon: "menu" },
-      { title: "📸 Instagram", url: "https://instagram.com", type: "instagram", icon: "instagram" },
-      { title: "📍 Como Chegar", url: "https://maps.google.com", type: "maps", icon: "maps" },
-      { title: "💬 WhatsApp", url: "https://wa.me/5511977779012", type: "whatsapp", icon: "whatsapp" },
-      { title: "🎵 TikTok", url: "https://tiktok.com", type: "tiktok", icon: "tiktok" },
+      { title: "Nosso Menu", url: "#", type: "menu", icon: "menu" },
+      { title: "Instagram", url: "https://instagram.com", type: "instagram", icon: "instagram" },
+      { title: "Como Chegar", url: "https://maps.google.com", type: "maps", icon: "maps" },
+      { title: "WhatsApp", url: "https://wa.me/5511977779012", type: "whatsapp", icon: "whatsapp" },
+      { title: "TikTok", url: "https://tiktok.com", type: "tiktok", icon: "tiktok" },
     ],
     schedule: [
       { day: "Segunda a Sexta", hours: "07:00 - 19:00" },
@@ -126,7 +126,7 @@ export const stores: Record<string, StoreConfig> = {
   "pontonet": {
     slug: "pontonet",
     name: "PontoNet",
-    tagline: "O seu provedor de internet 🌐",
+    tagline: "O seu provedor de internet",
     description: "Há mais de 7 anos conectando Parauapebas com internet de qualidade. Fibra óptica com velocidade real, suporte humanizado e a melhor experiência de conexão da região.",
     theme: {
       primaryColor: "#0ea5e9",
@@ -142,13 +142,13 @@ export const stores: Record<string, StoreConfig> = {
       address: "Parauapebas - PA",
     },
     links: [
-      { title: "📶 Conheça Nossos Planos", url: "https://pontonetpa.com.br", type: "website", icon: "website" },
-      { title: "💬 Assine pelo WhatsApp", url: "https://wa.me/5594999990000", type: "whatsapp", icon: "whatsapp" },
-      { title: "📸 Siga no Instagram", url: "https://instagram.com/_pontonett", type: "instagram", icon: "instagram" },
-      { title: "🌐 Acesse Nosso Site", url: "https://pontonetpa.com.br", type: "website", icon: "website" },
-      { title: "📍 Nossa Localização", url: "https://maps.google.com", type: "maps", icon: "maps" },
-      { title: "📞 Central de Atendimento", url: "tel:+5594999990000", type: "phone", icon: "phone" },
-      { title: "⭐ Avalie no Google", url: "https://google.com", type: "custom", icon: "custom" },
+      { title: "Conheça Nossos Planos", url: "https://pontonetpa.com.br", type: "website", icon: "website" },
+      { title: "Assine pelo WhatsApp", url: "https://wa.me/5594999990000", type: "whatsapp", icon: "whatsapp" },
+      { title: "Siga no Instagram", url: "https://instagram.com/_pontonett", type: "instagram", icon: "instagram" },
+      { title: "Acesse Nosso Site", url: "https://pontonetpa.com.br", type: "website", icon: "website" },
+      { title: "Nossa Localização", url: "https://maps.google.com", type: "maps", icon: "maps" },
+      { title: "Central de Atendimento", url: "tel:+5594999990000", type: "phone", icon: "phone" },
+      { title: "Avalie no Google", url: "https://google.com", type: "custom", icon: "custom" },
     ],
     schedule: [
       { day: "Segunda a Sexta", hours: "08:00 - 18:00" },
