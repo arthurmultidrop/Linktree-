@@ -1,39 +1,28 @@
-import { MapPin, Instagram } from "lucide-react";
+import { MapPin, Nfc } from "lucide-react";
 import { StoreConfig } from "@/lib/types";
 
 export default function StoreFooter({ store }: { store: StoreConfig }) {
-  const { contact, socialMedia } = store;
+  const { contact } = store;
 
   return (
-    <footer className="w-full text-center space-y-4 pt-6 border-t border-neutral-800/60">
+    <footer className="w-full flex flex-col items-center gap-3 pt-2 animate-fade-up delay-500">
+      {/* Address */}
       {contact.address && (
-        <p className="text-neutral-500 text-xs flex items-center justify-center gap-1.5">
-          <MapPin size={12} />
+        <p className="text-gray-400 text-xs flex items-center gap-1.5 text-center">
+          <MapPin size={12} className="shrink-0" />
           {contact.address}
         </p>
       )}
 
-      {socialMedia?.instagram && (
-        <div className="flex justify-center">
-          <a
-            href={`https://instagram.com/${socialMedia.instagram}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-neutral-300 transition-colors text-xs"
-          >
-            <Instagram size={12} />
-            @{socialMedia.instagram}
-          </a>
-        </div>
-      )}
-
-      <div className="pt-4">
-        <p className="text-neutral-700 text-[10px]">
-          Powered by{" "}
-          <a href="/" className="hover:text-neutral-500 transition-colors underline">
-            NFC Card
-          </a>
-        </p>
+      {/* TopFind branding */}
+      <div className="pt-4 pb-2 w-full flex justify-center">
+        <a
+          href="/"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gray-100 text-gray-400 text-[11px] font-medium hover:bg-gray-200 hover:text-gray-500 transition-all duration-200"
+        >
+          <Nfc size={11} />
+          Feito com TopFind
+        </a>
       </div>
     </footer>
   );

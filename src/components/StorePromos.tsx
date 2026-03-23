@@ -1,4 +1,4 @@
-import { Tag } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export default function StorePromos({
   promos,
@@ -8,26 +8,43 @@ export default function StorePromos({
   primaryColor: string;
 }) {
   return (
-    <div className="w-full space-y-2.5">
+    <div className="w-full space-y-3 animate-fade-up delay-100">
       {promos.map((promo, index) => (
         <div
           key={index}
-          className="rounded-xl p-4 border border-neutral-800/60 bg-neutral-900/50"
+          className="rounded-2xl p-4 relative overflow-hidden"
+          style={{
+            backgroundColor: `${primaryColor}08`,
+            border: `1px solid ${primaryColor}18`,
+          }}
         >
-          <div className="flex items-start gap-3">
-            <Tag size={14} className="text-neutral-500 mt-0.5 shrink-0" />
-            <div>
+          {/* Accent dot */}
+          <div
+            className="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-20 pointer-events-none -translate-y-1/2 translate-x-1/2"
+            style={{ backgroundColor: primaryColor }}
+          />
+
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-2">
+              <Sparkles
+                size={13}
+                style={{ color: primaryColor }}
+              />
               {promo.badge && (
                 <span
-                  className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold tracking-wider text-white mb-1.5"
+                  className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider text-white uppercase"
                   style={{ backgroundColor: primaryColor }}
                 >
                   {promo.badge}
                 </span>
               )}
-              <h4 className="text-neutral-100 font-medium text-sm">{promo.title}</h4>
-              <p className="text-neutral-500 text-xs mt-1 leading-relaxed">{promo.description}</p>
             </div>
+            <h4 className="text-gray-800 font-semibold text-sm">
+              {promo.title}
+            </h4>
+            <p className="text-gray-500 text-xs mt-1 leading-relaxed">
+              {promo.description}
+            </p>
           </div>
         </div>
       ))}

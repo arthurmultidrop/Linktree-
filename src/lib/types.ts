@@ -2,12 +2,36 @@ export interface StoreLink {
   title: string;
   url: string;
   icon?: string;
-  type: "website" | "instagram" | "whatsapp" | "facebook" | "tiktok" | "youtube" | "maps" | "menu" | "delivery" | "phone" | "email" | "custom";
+  type:
+    | "website"
+    | "instagram"
+    | "whatsapp"
+    | "facebook"
+    | "tiktok"
+    | "youtube"
+    | "maps"
+    | "menu"
+    | "delivery"
+    | "phone"
+    | "email"
+    | "custom";
 }
 
 export interface StoreSchedule {
   day: string;
   hours: string;
+}
+
+export interface StoreProduct {
+  title: string;
+  image: string;
+  price?: string;
+  description?: string;
+}
+
+export interface StoreTextBlock {
+  title?: string;
+  content: string;
 }
 
 export interface StoreConfig {
@@ -16,10 +40,13 @@ export interface StoreConfig {
   tagline: string;
   description?: string;
   logo?: string;
+  profileImage?: string;
   coverImage?: string;
   theme: {
     primaryColor: string;
     secondaryColor: string;
+    bgColor?: string;
+    fontFamily?: string;
     bgGradientFrom: string;
     bgGradientTo: string;
     style: "modern" | "elegant" | "vibrant" | "minimal";
@@ -44,4 +71,6 @@ export interface StoreConfig {
     description: string;
     badge?: string;
   }[];
+  products?: StoreProduct[];
+  textBlock?: StoreTextBlock;
 }
